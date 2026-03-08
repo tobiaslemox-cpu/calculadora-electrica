@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculadora eléctrica</title>
+</head>
+
+<body>
+
+<h2>Monofásico</h2>
+
+Voltaje
+<input id="v1">
+
+Potencia
+<input id="p1">
+
+<button onclick="mono()">Calcular</button>
+
+<p id="r1"></p>
+
+
+<h2>Trifásico</h2>
+
+Voltaje
+<input id="v2">
+
+Potencia
+<input id="p2">
+
+<button onclick="tri()">Calcular</button>
+
+<p id="r2"></p>
+
+<script>
+
+function mono(){
+let v=document.getElementById("v1").value
+let p=document.getElementById("p1").value
+let i=p/v
+document.getElementById("r1").innerHTML="Corriente: "+i+" A"
+}
+
+function tri(){
+let v=document.getElementById("v2").value
+let p=document.getElementById("p2").value
+let i=p/(1.732*v)
+document.getElementById("r2").innerHTML="Corriente: "+i+" A"
+}
+
+</script>
+
+</body>
+</html>
